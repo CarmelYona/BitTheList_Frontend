@@ -1,0 +1,60 @@
+.column-cell-wrapper {
+    // display: flex;
+    // justify-content: space-around;
+    // width: 200px;
+    // background-color: rgb(46, 26, 163);
+
+}
+
+
+.cell-component {
+    height: 35px;
+    background-color: #f5f6f8;
+    // overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    border-right: 1px solid;
+    border-right-color: #fff;
+    border-bottom: 1px solid #d0d4e4;
+    // border-top: 1px solid #ffffff;
+    min-width: 140px;
+    color: #323338;
+    color: var(--primary-text-color);
+    position: relative;
+
+
+    &.title-cell {
+        background-color: #ffffff00;
+    }
+
+    &.date {
+        overflow: visible;
+    }
+
+    &.persons {}
+
+    &.group-column {
+        background-color: #fff;
+
+        &:hover {
+            background-color: #e7e7e7;
+        }
+    }
+
+    &.status {
+        background-color: rgb(255, 255, 255);
+        border-color: rgba(0, 128, 0, 0);
+        overflow: visible;
+    }
+
+    &.priority {
+        border-color: rgba(0, 128, 0, 0);
+    }
+
+    .task-columns-wraper {
+        height: 33px;
+    }
+}

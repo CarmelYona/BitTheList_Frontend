@@ -1,0 +1,199 @@
+::selection {
+    background-color: $clr1;
+    color: $clr3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    line-height: 1.8;
+    line-height: 1.5;
+}
+
+body {
+    overflow-x: initial;
+    overflow-y: initial;
+    line-height: 1.5;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin: 0 0 1rem;
+    line-height: lh(40px, 29px);
+}
+
+h1 {
+    font-size: rem(60px);
+}
+
+h2 {
+    font-size: em(16px);
+    margin: em(63px) 0;
+    grid-area: title;
+    color: $clr1;
+    text-transform: uppercase;
+    @include type(boldCondensed);
+}
+
+h3 {
+    font-size: em(29px);
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+img {
+    width: 100%;
+}
+
+.text-component {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    padding: 0 2px;
+}
+
+.btn {
+    --loader-padding: 8px;
+    outline: none;
+    border: none;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 50ms transform, .1scubic-bezier(0, 0, 0.35, 1) min-width;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    --element-width: 32;
+    --element-height: 32;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+mark {
+    color: $clr1;
+    background-color: transparent;
+}
+
+input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}

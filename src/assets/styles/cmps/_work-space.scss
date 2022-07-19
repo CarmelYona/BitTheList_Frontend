@@ -1,0 +1,14 @@
+.work-space {
+    position: absolute;
+    background-color: #ffffff;
+    color: #323338;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    left: 66px;
+    display: flex;
+    transition: left 150ms cubic-bezier(0, 0, 0.35, 1);
+    overflow: hidden;
+}

@@ -1,0 +1,280 @@
+.activity-log-panel {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 560px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    box-shadow: 0 4px 17px 6px rgb(0 0 0 / 10%);
+    background-color: #ffffff;
+    z-index: 40;
+    overflow: hidden;
+
+
+    .activity-log-header {
+        padding: 20px;
+        flex: 0 1 auto;
+
+        .activity-log-close-btn {
+            cursor: pointer;
+            width: 20px;
+        }
+
+        .activity-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 6px;
+            line-height: 26px;
+            min-height: 25px;
+            cursor: default;
+        }
+
+        .tabs-wrapper {
+            align-items: center;
+            border-bottom: 1px solid #efefef;
+
+            .activity-tab {
+                margin-right: 10px;
+                padding: 0 8px 8px;
+                font-size: .875rem;
+                cursor: pointer;
+
+                &.shown {
+                    border-bottom: 2px solid #0073ea;
+                }
+            }
+
+            .update-tab {
+                margin-right: 10px;
+                padding: 0 8px 8px;
+                font-size: .875rem;
+                cursor: pointer;
+
+                &.shown {
+                    border-bottom: 2px solid #0073ea;
+                }
+
+            }
+        }
+    }
+
+    .update-wrapper {
+        padding: 20px;
+        flex: 1 1 auto;
+        overflow: hidden;
+        position: relative;
+        display: none;
+
+        .divider {
+            border-bottom: 5px solid #0073ea;
+        }
+
+        &.shown {
+            display: block;
+        }
+
+        .btn-input {
+            width: 100%;
+            border: 1px solid #0073ea;
+            background: transparent;
+            border-radius: 8px;
+            padding: 10px 20px;
+            color: #323338;
+            cursor: text;
+            transition: color .15s ease-in-out;
+            justify-content: start;
+            text-align: left;
+            outline: none;
+            margin: 0 0 40px;
+        }
+
+        .updates-wrapper-cards {
+            .update-card {
+                position: relative;
+                overflow: visible;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 300;
+                color: #323338;
+                border: 1px solid #e6e9ef;
+                margin-bottom: 16px;
+                border-radius: 8px;
+
+                .update-header {
+                    align-items: center;
+                    padding: 15px;
+                    font-weight: 700;
+                }
+
+                .body-text {
+                    padding: 0 15px 15px;
+                    min-height: 60px;
+                }
+            }
+        }
+
+        .item-updates-container {
+            .main-input {
+                height: 145px;
+
+                // .text-editor-container {
+                //     display: flex;
+                //     flex: 1 1 auto;
+                //     flex-direction: column;
+                //     overflow: hidden;
+                //     background: 0 0;
+                //     border: 0;
+                //     box-shadow: none;
+                //     float: none;
+                //     height: auto;
+                //     margin: 0;
+                //     max-width: none;
+                //     outline: 0;
+                //     padding: 0;
+                //     position: static;
+                //     width: auto;
+
+                //     .text-editor-header {
+                //         box-shadow: none;
+                //         transition: box-shadow .5s;
+                //         z-index: 1;
+                //         background: 0 0;
+                //         border: 0;
+                //         box-shadow: none;
+                //         float: none;
+                //         height: auto;
+                //         margin: 0;
+                //         max-width: none;
+                //         outline: 0;
+                //         padding: 0;
+                //         position: static;
+                //         width: auto;
+
+                //         .tool-bar {}
+
+                //         background: 0 0;
+                //         border: 0;
+                //         box-shadow: none;
+                //         float: none;
+                //         height: auto;
+                //         margin: 0;
+                //         max-width: none;
+                //         outline: 0;
+                //         padding: 0;
+                //         position: static;
+                //         width: auto;
+                //         background-color: #ffffff;
+                //     }
+                // }
+            }
+        }
+    }
+
+    .activity-log-wrapper {
+        display: none;
+        padding: 0 25px;
+        overflow-y: scroll;
+        width: 100%;
+        align-items: center;
+
+        // overflow: hidden;
+        &.shown {
+            display: block;
+            color: #0073ea;
+            height: 100%;
+        }
+
+        .single-activity {
+            width: 100%;
+            align-items: center;
+            border-bottom: 1px solid rgb(219, 218, 218);
+
+            .activity-box {
+                color: #676879;
+                width: 100%;
+                height: 39px;
+                font-size: .875rem;
+                /* padding: 0 8px 0 16px; */
+                margin: 4px 0;
+                justify-content: flex-start;
+                position: relative;
+                align-items: center;
+
+                .activity-time {
+                    flex-basis: 56px;
+                    align-items: center;
+                    margin-right: 13px;
+                }
+
+                .activity-member {
+                    // flex: 0.8 0;
+                    grid-gap: 5px;
+                    align-items: center;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .activity {
+                    flex: 1.5 0;
+                    grid-gap: 15px;
+                    gap: 15px;
+                    margin-left: 20px;
+                }
+
+                .activity-info {
+                    height: 100%;
+                    // flex: 1 1 auto;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: capitalize;
+
+                    .from {
+                        color: rgb(89, 89, 89);
+                        width: 70px;
+                        height: 40px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 3px;
+                        color: rgb(255, 255, 255);
+                        font-size: 11px;
+                    }
+
+                    .arrow-to {
+                        padding: 3px;
+                    }
+
+                    .to {
+                        color: rgb(96, 96, 96);
+                        width: 70px;
+                        height: 40px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 3px;
+                        color: rgb(255, 255, 255);
+                        font-size: 11px;
+                        // text-transform: capitalize;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    // }
+}
+
+// #root>main>div>section>section>div>div>div.board-header>div.activity-log-panel.flex>div.activity-log-wrapper.flex.column {
+//     background-color: aqua;
+// }

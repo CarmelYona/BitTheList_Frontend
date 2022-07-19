@@ -1,0 +1,56 @@
+.pulse-component-wrapper {
+    min-width: 1060px;
+    z-index: 0;
+    background-color: #f5f6f8;
+
+    &:hover:not(.group-footer, .group-header-wrapper) {
+        .task-column {
+            background-color: rgb(230, 233, 239);
+        }
+
+        .title-inner-container {
+            background-color: rgb(230, 233, 239);
+        }
+
+        background-color: rgb(230, 233, 239);
+
+        .btn-pulse-menu {
+            display: block;
+        }
+    }
+
+    #root>main>div>section>section>div>div>div.board-content>div>div>div:nth-child(2)>div:nth-child(1)>div>div>div>div.cells-row-container>div>div:nth-child(2)>div>div>div>div {
+        background-color: aquamarine;
+    }
+
+    .pulse-component {
+        height: 36px;
+        line-height: 36px;
+        padding-left: 30px;
+        cursor: pointer;
+        display: flex;
+        border-bottom: 1px solid;
+        border-bottom-color: #fff;
+        position: relative;
+    }
+
+    .cells-row-container {
+        max-width: 1000px;
+        flex-basis: 700px;
+        flex-shrink: 0;
+        // margin-right: 786px;
+
+        .cells-row-component {
+            width: 100%;
+            position: relative;
+            height: 100%;
+            display: flex;
+
+            .cell-component-wrapper {
+                width: 141px;
+                display: inline-block;
+                height: 100%;
+            }
+        }
+    }
+}

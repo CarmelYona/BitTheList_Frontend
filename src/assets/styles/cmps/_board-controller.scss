@@ -1,0 +1,307 @@
+.board-controller {
+    width: 30px; //open : 225px close : 30px
+    animation-name: slideInFromLeft;
+    animation-duration: .1s;
+    animation-timing-function: cubic-bezier(0, 0, 0.35, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    border-right: 1px solid;
+    border-color: #e6e9ef;
+    z-index: 20;
+    transition: width .1s cubic-bezier(0, 0, 0.35, 1);
+    color: #323338;
+    background-color: rgb(246, 247, 251);
+
+    @media (min-width : 550px) {
+        &:hover {
+            width: 255px;
+
+            .controller-container {
+                display: block;
+            }
+        }
+    }
+
+
+    &:hover:not(.pinned) {
+        box-shadow: 0px 6px 20px rgb(0 0 0 / 20%);
+    }
+
+    &.pinned {
+        width: 255px;
+    }
+
+    .controller-btn {
+        border: 1px solid;
+        border-color: #e6e9ef;
+        border-radius: 20px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 3px 9px;
+        position: absolute;
+        font-family: monospace;
+        font-size: 13px;
+        top: 20px;
+        right: -14px;
+        z-index: 100;
+        transition: background-color 100ms ease, padding-left 100ms ease, padding-right 100ms ease, border-color 100ms ease, color 100ms ease;
+        animation-name: slideInFromLeft;
+        animation-duration: .15s;
+        animation-timing-function: cubic-bezier(0, 0, 0.35, 1);
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+
+        &.pinned {
+            &:hover {
+                padding-right: 16px;
+            }
+        }
+
+        &:hover {
+            background-color: #0085ff;
+            border-color: #0085ff;
+            color: #fff;
+        }
+    }
+
+    .footer-wrapper {
+        display: none;
+    }
+}
+
+
+.board-controller .controller-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    .controller-container:hover {
+        display: block;
+    }
+
+    &.pinned {
+        display: block;
+    }
+
+    .controller-top-top {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 12px 16px 18px 16px;
+        height: 68px;
+
+        .dropdown-navigation-header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 4px;
+
+            .title {
+                font-size: 14px;
+                font-weight: 600;
+                color: #676879;
+            }
+
+            .dropdown-navigation {
+                text-align: center;
+                border-radius: 4px;
+                width: 26px;
+                height: 26px;
+                font-size: 30px;
+                padding-right: 29px;
+                line-height: 22px;
+                font-weight: 900;
+                cursor: not-allowed;
+
+
+            }
+        }
+
+        .work-space-dropdown {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 6px;
+            border-radius: 4px;
+            margin-right: 4px;
+            font-family: Roboto-Bold;
+            border: 1px solid;
+            border-color: #676879;
+            cursor: not-allowed;
+
+            .name-container {
+                display: flex;
+            }
+
+            .work-space-avatar {
+                color: #fff;
+                padding: 0px 5px;
+                border-radius: 9px;
+                margin-right: 4px;
+                background-color: rgb(242, 121, 242);
+                margin-right: 8px;
+            }
+
+            .open-drop-down {
+                font-family: monospace;
+                font-size: 16px;
+                padding-left: 8px;
+                padding-right: 4px;
+                margin-left: auto;
+                transform: rotate(270deg);
+            }
+        }
+    }
+
+    .controller-top-bottom {
+        padding: 0 16px 16px 14px;
+
+        .btn-add {
+            margin: 0;
+            font-size: 14px;
+            color: #323338;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            height: 34px;
+            padding: 0 6px;
+            font-weight: 400;
+            padding-right: 3px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e6e9ef;
+            }
+
+            span {
+                color: #323338;
+                font-size: 14px;
+                font-weight: 600;
+                font-family: Roboto-thin;
+            }
+        }
+
+        .controller-add-btn {
+            font-size: .875rem;
+            height: 32px;
+            grid-gap: 5px;
+            gap: 5px;
+            padding: 0 8px;
+
+        }
+    }
+
+    .spacer {
+        border-bottom: 1px solid;
+        border-color: #dde0e6;
+        margin: 0 20px;
+    }
+
+    .controller-bottom {
+        padding-top: 6px;
+        height: 100%;
+        width: 100%;
+        flex-grow: 1;
+        position: relative;
+    }
+}
+
+.board-list-container {
+    box-sizing: border-box;
+    direction: ltr;
+    height: 406px;
+    position: relative;
+
+    .board-preview {
+        .active {
+            .board-preview-card {
+                background-color: #e5f4ff;
+            }
+        }
+    }
+
+    .board-preview:hover {
+        .board-preview-card:not(.active) {
+            background-color: #e6e9ef;
+        }
+
+        .board-dropdown-menu::after {
+
+            content: "⋯";
+            // position: absolute;
+        }
+    }
+
+    .board-dropdown-menu {}
+
+    .board-preview-card-wrapper {
+        height: 34px;
+        width: 100%;
+        padding-right: 8px;
+        padding-left: 12px;
+
+        .board-preview-card {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            color: #323338;
+            border-radius: 4px;
+
+            .board-icon {
+                display: flex;
+                padding-bottom: 2px;
+                align-items: center;
+                color: #323338;
+            }
+
+            .board-title-container {
+                border: 0;
+                padding-bottom: 2px;
+                min-width: 0;
+                width: auto;
+                flex: 1;
+                margin-left: 6px;
+                display: flex;
+                align-items: center;
+                line-height: 20px;
+                justify-content: space-between;
+
+                .board-dropdown-menu {
+                    text-align: center;
+                    position: relative;
+                    border-radius: 4px;
+                    width: 26px;
+                    height: 26px;
+                    font-size: 25px;
+                    padding-right: 29px;
+                    line-height: 27px;
+                    font-weight: 900;
+                    border-radius: 50px;
+
+                    &:hover {
+                        color: #7299ff;
+                    }
+                }
+
+                .delete-btn {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}

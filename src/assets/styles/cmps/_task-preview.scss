@@ -1,0 +1,71 @@
+.task-preview {
+    .btn-side-task {
+        width: 18px;
+        height: 18px;
+        font-size: 15px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #e6e9ef;
+        display: none;
+    }
+
+    &:hover {
+        .edit-btn {
+            display: block;
+            display: inline-block;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .btn-side-task {
+            display: block;
+            display: inline-block;
+        }
+    }
+}
+
+.title-component {
+    .input-edit-state {
+        font-size: 13px;
+        font-weight: 400;
+        background-color: white;
+        outline: 1px solid #0073ea;
+    }
+}
+
+
+.cells-row-container {
+    // max-width: 1000px;
+    // flex-basis: 700px;
+    flex-shrink: 0;
+    // width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+.column-wrapper-add {
+    width: 8px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 32px;
+    background-color: rgb(206, 206, 206);
+
+    &:not(.header)::before {
+        content: "";
+        position: absolute;
+        right: 8px;
+        width: 32px;
+        height: 34px;
+        border-bottom: 1px solid #d0d4e4;
+    }
+}
+
+.group-header-wrapper {
+    .column-wrapper-add {
+        background-color: rgba(0, 128, 0, 0);
+    }
+}

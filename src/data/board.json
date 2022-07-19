@@ -1,0 +1,325 @@
+[
+    {
+        "_id": "b101",
+        "title": "oof gozal",
+        "archivedAt": "",
+        "createdAt": "",
+        "createdBy": {
+            "_id": "u101",
+            "fullname": "Abi Abambi",
+            "imgUrl": "http://some-img"
+        },
+        "style": {},
+        "columns": [
+            "text",
+            "status",
+            "priority",
+            "date",
+            "persons"
+        ],
+        "persons": [
+            {
+                "_id": "u101",
+                "fullname": "Carmel Yona",
+                "imgUrl": "https://www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
+            },
+            {
+                "_id": "u102",
+                "fullname": "Shani Eini",
+                "imgUrl": "https://www.google.com"
+            },
+            {
+                "_id": "u103",
+                "fullname": "Hallel Hofman",
+                "imgUrl": "https://www.google.com"
+            },
+            {
+                "_id": "u104",
+                "fullname": "Shlomo Lifshitz",
+                "imgUrl": "https://www.google.com"
+            },
+            {
+                "_id": "u105",
+                "fullname": "Rona Fainshtein",
+                "imgUrl": "https://www.google.com"
+            },
+            {
+                "_id": "u106",
+                "fullname": "Puki Matuki",
+                "imgUrl": "https://www.google.com"
+            }
+        ],
+        "groups": [
+            {
+                "id": "g101",
+                "title": "Day 1",
+                "archivedAt": 1589983468418,
+                "style": {},
+                "progress": [],
+                "tasks": [
+                    {
+                        "id": "c101",
+                        "title": "Replace logo",
+                        "text": "lets get it done",
+                        "status": "done",
+                        "date": "24/05/2022",
+                        "priority": "high",
+                        "activities": [],
+                        "persons": [
+                            {
+                                "_id": "u101",
+                                "fullname": "Carmel Yona",
+                                "imgUrl": "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c102",
+                        "title": "Add Samples",
+                        "text": "lets get it done",
+                        "status": "done",
+                        "date": "24/05/2022",
+                        "priority": "mid",
+                        "persons": [
+                            {
+                                "_id": "u101",
+                                "fullname": "Carmel Yona",
+                                "imgUrl": "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "g102",
+                "title": "Day 2",
+                "tasks": [
+                    {
+                        "id": "c103",
+                        "title": "Do that",
+                        "text": "lets get it done",
+                        "status": "done",
+                        "date": "24/05/2022",
+                        "priority": "low",
+                        "persons": [
+                            {
+                                "_id": "u102",
+                                "fullname": "Shani Eini",
+                                "imgUrl": "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
+                            }
+                        ],
+                        "archivedAt": 1589983468418
+                    },
+                    {
+                        "id": "c104",
+                        "title": "Help me",
+                        "text": "lets get it done",
+                        "date": "24/05/2022",
+                        "priority": "high",
+                        "persons": [
+                            {
+                                "_id": "u102",
+                                "fullname": "Shani Eini",
+                                "imgUrl": "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
+                            }
+                        ],
+                        "status": "working on it",
+                        "description": "description",
+                        "comments": [
+                            {
+                                "id": "ZdPnm",
+                                "txt": "also @yaronb please CR this",
+                                "createdAt": 1590999817436.0,
+                                "byMember": {
+                                    "_id": "u101",
+                                    "fullname": "Tal Tarablus",
+                                    "imgUrl": "http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg"
+                                }
+                            }
+                        ],
+                        "checklists": [
+                            {
+                                "id": "YEhmF",
+                                "title": "Checklist",
+                                "todos": [
+                                    {
+                                        "id": "212jX",
+                                        "title": "To Do 1",
+                                        "isDone": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "memberIds": [
+                            "u101"
+                        ],
+                        "labelIds": [
+                            "l101",
+                            "l102"
+                        ],
+                        "createdAt": 1590999730348,
+                        "dueDate": 16156215211,
+                        "byMember": {
+                            "_id": "u101",
+                            "username": "Tal",
+                            "fullname": "Tal Tarablus",
+                            "imgUrl": "http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg"
+                        },
+                        "style": {
+                            "bgColor": "#26de81"
+                        }
+                    }
+                ],
+                "style": {}
+            }
+        ],
+        "activities": [],
+        "cmpsOrder": [
+            "status-picker",
+            "member-picker",
+            "date-picker"
+        ]
+    },
+    {
+        "_id": "b102",
+        "title": "chtoch et hashmaim",
+        "archivedAt": "",
+        "createdAt": "",
+        "createdBy": {
+            "_id": "u101",
+            "fullname": "Abi Abambi",
+            "imgUrl": "http://some-img"
+        },
+        "style": {},
+        "columns": [
+            "text",
+            "status",
+            "date",
+            "persons",
+            "priority"
+        ],
+        "persons": [
+            {
+                "_id": "u101",
+                "fullname": "Tal Tarablus",
+                "imgUrl": "https://www.google.com"
+            }
+        ],
+        "groups": [
+            {
+                "id": "g101",
+                "title": "Day 1",
+                "archivedAt": 1589983468418,
+                "style": {},
+                "tasks": [
+                    {
+                        "id": "c101",
+                        "title": "Replace logo",
+                        "text": "lets get it done",
+                        "status": "done",
+                        "date": "24/05/2022",
+                        "priority": "high",
+                        "persons": []
+                    },
+                    {
+                        "id": "c102",
+                        "title": "Add Samples",
+                        "text": "lets get it done",
+                        "status": "done",
+                        "date": "24/05/2022",
+                        "persons": []
+                    }
+                ]
+            },
+            {
+                "id": "g102",
+                "title": "Day 2",
+                "tasks": [
+                    {
+                        "id": "c103",
+                        "title": "Do that",
+                        "text": "lets get it done",
+                        "status": "done",
+                        "date": "24/05/2022",
+                        "persons": [],
+                        "archivedAt": 1589983468418
+                    },
+                    {
+                        "id": "c104",
+                        "title": "Help me",
+                        "text": "lets get it done",
+                        "date": "24/05/2022",
+                        "persons": [],
+                        "status": "working on it",
+                        "description": "description",
+                        "comments": [
+                            {
+                                "id": "ZdPnm",
+                                "txt": "also @yaronb please CR this",
+                                "createdAt": 1590999817436.0,
+                                "byMember": {
+                                    "_id": "u101",
+                                    "fullname": "Tal Tarablus",
+                                    "imgUrl": "http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg"
+                                }
+                            }
+                        ],
+                        "checklists": [
+                            {
+                                "id": "YEhmF",
+                                "title": "Checklist",
+                                "todos": [
+                                    {
+                                        "id": "212jX",
+                                        "title": "To Do 1",
+                                        "isDone": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "memberIds": [
+                            "u101"
+                        ],
+                        "labelIds": [
+                            "l101",
+                            "l102"
+                        ],
+                        "createdAt": 1590999730348,
+                        "dueDate": 16156215211,
+                        "byMember": {
+                            "_id": "u101",
+                            "username": "Tal",
+                            "fullname": "Tal Tarablus",
+                            "imgUrl": "http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg"
+                        },
+                        "style": {
+                            "bgColor": "#26de81"
+                        }
+                    }
+                ],
+                "style": {}
+            }
+        ],
+        "activities": [
+            {
+                "id": "a101",
+                "txt": "Changed Color",
+                "createdAt": 154514,
+                "byMember": {
+                    "_id": "u101",
+                    "fullname": "Abi Abambi",
+                    "imgUrl": "http://some-img"
+                },
+                "task": {
+                    "id": "c101",
+                    "title": "Replace Logo"
+                }
+            }
+        ],
+        "cmpsOrder": [
+            "status-picker",
+            "member-picker",
+            "date-picker"
+        ]
+    }
+]

@@ -1,0 +1,286 @@
+.title-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    position: sticky;
+    left: 46px;
+    z-index: 10;
+    display: flex;
+
+    // flex: 1 1 auto;
+    &:hover {
+        .title-cell-component {
+            color: #0073ea;
+        }
+    }
+
+    .title-inner-container {
+        background-color: #f5f6f8d4;
+        min-width: 282px;
+        flex-grow: 1;
+        width: 0;
+        z-index: 2;
+
+        .title-inner-wrapper {
+            height: 100%;
+
+            .title-cell {
+                // flex-basis: 400px;
+                flex: 1 0 308px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.btn-pulse-menu-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 46px;
+    padding-left: 16px;
+    left: -46px;
+    height: 100%;
+    border-left: -3px solid white;
+    /* margin-left: 30px; */
+    background-color: #fff;
+
+    .btn-pulse-menu {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .btn-pulse-menu.btn-pulse-menu:before {
+
+        width: 100%;
+        height: 100%;
+        background-color: rgb(220, 223, 236);
+        padding: 0px 3px;
+        content: '▾';
+        border-radius: 5px;
+        margin-left: 6px;
+    }
+
+}
+
+.title-cell-component {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 0;
+    height: 100%;
+    text-align: left;
+    font-weight: bold;
+
+    .pulse-left-indicator {
+        // background-color: rgb(87, 155, 252);
+        color: rgb(87, 155, 252);
+        flex: 0 0 8px;
+        height: 100%;
+        transition: flex-basis .1s ease-in;
+        position: relative;
+    }
+
+    .title-cell-text {
+        width: 100%;
+
+        .update-svg {
+            color: #c5c7d0;
+            width: 24px;
+            height: 24px;
+            transition: color 0.7s;
+            color: #c4c5c6;
+
+            &:hover {
+                color: #0073ea;
+            }
+        }
+
+        .add-update-btn-wrapper {
+            align-items: center;
+            justify-content: center;
+
+            .msg-svg {
+                color: #0073ea;
+                width: 24px;
+                height: 24px;
+            }
+
+            .update-num {
+                position: absolute;
+                background-color: #0073ea;
+                color: #fff;
+                border-radius: 10px;
+                text-align: center;
+                padding: 2px 4px;
+                // top: 18px;
+                // left: 13px;
+                margin-top: 18px;
+                margin-left: 13px;
+                line-height: 9px;
+                font-size: .625rem;
+            }
+        }
+    }
+
+    .title-component {
+        height: 24px;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        min-width: 0;
+        padding-left: 10px;
+        line-height: 23px;
+        text-decoration: none;
+        color: #323338;
+        font-weight: 400;
+        font-size: 13px;
+
+
+        .edit-icon-wrapper {
+            display: none;
+            flex: 0 0 24px;
+            text-align: center;
+            line-height: 24px;
+            // background-color: rgb(230, 233, 239);
+            order: 1;
+
+            .edit-icon {
+                cursor: pointer;
+                height: 24px;
+                flex: initial;
+                margin-left: 8px;
+                color: #676879;
+                padding-left: 8px;
+                padding-right: 8px;
+                border-radius: 4px;
+                line-height: 22px;
+                padding-top: 2px;
+            }
+        }
+
+
+    }
+
+    .conversation-indicator-component {
+        display: flex;
+        justify-content: center;
+        padding: 0 4px;
+    }
+
+}
+
+.title-cell-component:hover {
+    .title-component {
+        .edit-icon-wrapper {
+            display: inline-flex;
+
+            .edit-icon {
+                background-color: rgb(230, 233, 239);
+            }
+
+            .edit-icon:hover {
+
+                background-color: #f5f6f8;
+
+            }
+        }
+    }
+}
+
+.detailes-main-modal-wrapper {
+    display: flex;
+    position: fixed;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 17px 6px;
+    color: rgb(50, 51, 56);
+    height: 657px;
+    right: 0;
+    top: 0;
+    width: 560px;
+    z-index: 500;
+
+    .activity-header {
+        padding: 20px;
+        flex: 0 1 auto;
+
+        .activity-close-btn {
+            cursor: pointer;
+        }
+
+        .activity-title {
+            display: flex;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 6px;
+            line-height: 26px;
+            min-height: 25px;
+            cursor: default;
+        }
+
+        .activity-btns {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #efefef;
+
+            .activity-btn-update {
+                border-bottom: 2px solid #0073ea;
+                margin-right: 10px;
+                padding: 0 8px 8px;
+                font-size: .875rem;
+            }
+
+            .activity-btn-log {
+                margin-right: 10px;
+                padding: 0 8px 8px;
+                font-size: .875rem;
+            }
+        }
+    }
+
+    .main-body-modal {
+        padding: 20px;
+        flex: 1 1 auto;
+        overflow: scroll;
+        position: relative;
+
+        .item-update-content {}
+    }
+}
+
+.task-modal-menu {
+    width: 200px;
+    // top: 67px;
+    left: 5px;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 4px 17px 6px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+
+    .task-btns-modal-open {
+
+        font-weight: 400;
+        margin: 0;
+        font-family: Roboto-thin;
+        padding-left: 8px;
+    }
+}
+
+.task-btn-crud {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    color: rgb(55, 56, 50);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: Roboto;
+    border-bottom: black;
+
+    &:hover {
+        background-color: #e6e9ef;
+    }
+}

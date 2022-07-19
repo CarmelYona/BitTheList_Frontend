@@ -1,0 +1,67 @@
+.progres-bar-position {
+    height: 40px;
+    padding-left: 30px;
+    margin-bottom: 70px;
+
+    .empty-cell {
+        min-width: 282px;
+        flex-grow: 1;
+        width: 0;
+    }
+
+    .empty-cell-date {
+        height: 100%;
+        min-width: 140px;
+    }
+
+    .empty-cell-priority {
+        height: 100%;
+        min-width: 140px;
+    }
+
+    .empty-cell-text {
+        height: 100%;
+        min-width: 140px;
+    }
+
+    .empty-cell-persons {
+        height: 100%;
+        min-width: 140px;
+    }
+
+    .empty-cell-box {
+        height: 100%;
+        min-width: 45px;
+    }
+
+    .progress-display {
+        background-color: #f5f6f8;
+        min-width: 140px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 25px;
+        width: 115px;
+        background-color: rgb(158, 158, 158);
+        display: flex;
+    }
+
+    .progress-indicator {
+        cursor: pointer;
+        transition: height .3s;
+
+        &:hover {
+            height: 28px;
+            position: relative;
+            bottom: 5%;
+            border-radius: 3px;
+        }
+    }
+
+
+}

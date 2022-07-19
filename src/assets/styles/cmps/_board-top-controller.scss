@@ -1,0 +1,88 @@
+.board-dropdown-menu {
+    .board-add-modal {
+        top: 0;
+        left: 35px;
+        font-family: Roboto;
+    }
+}
+
+.board-add-modal {
+    width: 240px;
+    left: 244px;
+    top: 99px;
+    position: absolute;
+    z-index: 10000;
+    box-shadow: 0 4px 17px 6px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 9px 5px;
+
+    .btns-top-add-modal {
+        padding: 3px;
+
+        .btn-modal-top-add-section {
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            color: rgb(51, 56, 50);
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                font-family: Roboto;
+            }
+
+            &:hover {
+                background-color: #e6e9ef;
+            }
+        }
+
+
+    }
+
+    .btns-bottom-add-modal {
+        padding: 3px;
+
+        .btn-modal-doc {
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            color: rgb(50, 51, 56);
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-family: Roboto-thin;
+
+            span {
+                font-size: 14px;
+                font-family: Roboto;
+            }
+
+            &:hover {
+                background-color: #e6e9ef;
+            }
+
+        }
+
+        .btn-modal-add-remove {
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            color: rgb(50, 51, 56);
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-family: Roboto;
+
+            span {
+                font-size: 14px;
+                font-family: Roboto;
+            }
+
+            &:hover {
+                background-color: #e6e9ef;
+            }
+        }
+    }
+}
